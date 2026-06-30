@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "imaginaires"
+version = "0.1.0"
+description = ""
+authors = ["Mickael Temporão <16172142+mickaeltemporao@users.noreply.github.com>"]
+license = "CC BY-NC 4.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mkdocs = {extras = ["i18n"], version = "^1.6.1"}
+mkdocs-material = "^9.5.50"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
