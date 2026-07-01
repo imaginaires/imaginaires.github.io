@@ -6,19 +6,11 @@ Ce projet a été conçu pour être le plus simple, léger et portable possible 
 
 ---
 
-## 🎨 Design & Identité Visuelle
-
-Le site utilise un **thème rétro néon sombre** (`index.html`) spécialement conçu pour correspondre à l'identité visuelle de l'association :
-- **Couleurs** : Un fond sombre violet-noir (`#0b0914`), illuminé par des accents de cyan électrique (`#00ffff`), de magenta/rose et d'indigo, inspiré de l'univers des jeux vidéo rétro et de l'art du logo.
-- **Typographie** : La police de caractères pixelisée `VT323` est utilisée pour les titres (pour s'harmoniser avec la police *8BIT WONDER* présente dans le logo), combinée avec la police moderne `Inter` pour garantir une lecture agréable des textes.
-
----
-
-## 🚀 Comment Répliquer ce Projet (Déploiement Rapide)
+## Comment Répliquer ce Projet 
 
 Il n'y a **aucun outil complexe** à installer (pas de base de données, pas de compilateur CSS, pas de framework). C'est du HTML/CSS pur.
 
-### Option A : Déploiement en 1 clic sur GitHub Pages (Recommandé)
+### Option A : Déploiement en 1 clic sur GitHub Pages
 
 1. **Forkez ou dupliquez** ce dépôt sur votre compte GitHub.
 2. Allez dans les **Settings** (Paramètres) de votre dépôt GitHub.
@@ -49,16 +41,21 @@ Tous les visuels sont stockés dans le dossier `img/`. Il vous suffit de remplac
 - `img/logo-isf-fullart.svg` : Le logo artistique principal affiché sur la page d'accueil.
 - `img/favicon.ico` : L'icône de l'onglet du navigateur.
 
+
 ---
 
-## 💻 Développement Local
+## 🤝 Rejoindre et Contribuer
 
-Pour visualiser le site sur votre ordinateur :
-1. Téléchargez ou clonez ce dépôt.
-2. Double-cliquez sur `index.html` pour l'ouvrir directement dans votre navigateur web.
-3. Si vous souhaitez tester le site avec un serveur local, vous pouvez exécuter l'une de ces commandes dans votre terminal depuis la racine du projet :
-   - Avec Python : `python3 -m http.server 8000` (puis ouvrez `http://localhost:8000`)
-   - Avec Node.js : `npx serve`
+Ce projet est né de l'initiative de deux passionnés de jeux désireux de partager des moments d'évasion. Nous sommes entièrement bénévoles, l'accès est totalement gratuit et sans frais. Tout reste à construire !
+Nous n'avons pas de formule magique ni de solution préconçue pour tout améliorer : c'est pourquoi vos idées, vos retours et vos contributions sont les bienvenus.
+
+### Comment vous impliquer ?
+- **Répliquer le concept** : Lancez des sessions de jeux ou créez une antenne locale dans votre propre ville ou hôpital.
+- **Proposer des améliorations** : Que ce soit pour le design du site, de nouvelles idées d'activités ou des corrections de texte, toutes les contributions sont bienvenues.
+- **Ajouter votre antenne locale sur ce site** :
+  - *Si vous n'êtes pas développeur* : [Ouvrez simplement une issue sur GitHub](https://github.com/imaginaires/imaginaires.github.io/issues/new) pour nous transmettre les coordonnées et informations de votre antenne afin que nous l'ajoutions.
+  - *Si vous savez coder* : Proposez une Pull Request (PR) pour intégrer votre antenne directement au code du site.
+
 
 ---
 
@@ -66,4 +63,4 @@ Pour visualiser le site sur votre ordinateur :
 
 Ce projet est distribué sous la licence **Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0)**. 
 
-Vous êtes libre de partager et d'adapter ce projet tant que vous attribuez la paternité à l'œuvre originale, n'en faites pas d'usage commercial, et redistribuez vos contributions sous la même licence. Voir le fichier [LICENSE](file:///home/mt/Documents/projects/asso-isf/imaginaires/LICENSE) pour plus de détails.
+Vous êtes libre de partager et d'adapter ce projet tant que vous donnez le crédit à l'œuvre originale, n'en faites pas d'usage commercial, et redistribuez vos contributions sous la même licence. Voir le fichier [LICENSE](file:///home/mt/Documents/projects/asso-isf/imaginaires/LICENSE) pour plus de détails.
