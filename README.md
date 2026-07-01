@@ -47,14 +47,20 @@ Tous les visuels sont stockés dans le dossier `img/`. Il vous suffit de remplac
 ## 🤝 Rejoindre et Contribuer
 
 Ce projet est né de l'initiative de deux passionnés de jeux désireux de partager des moments d'évasion. Nous sommes entièrement bénévoles, l'accès est totalement gratuit et sans frais. Tout reste à construire !
-Nous n'avons pas de formule magique ni de solution préconçue pour tout améliorer : c'est pourquoi vos idées, vos retours et vos contributions sont les bienvenus.
+Nous n'avons pas de formule magique ni de solution préconçue : c'est pourquoi vos idées, vos retours et vos contributions sont les bienvenus.
 
-### Comment vous impliquer ?
-- **Répliquer le concept** : Lancez des sessions de jeux ou créez une antenne locale dans votre propre ville ou hôpital.
-- **Proposer des améliorations** : Que ce soit pour le design du site, de nouvelles idées d'activités ou des corrections de texte, toutes les contributions sont bienvenues.
-- **Ajouter votre antenne locale sur ce site** :
-  - *Si vous n'êtes pas développeur* : [Ouvrez simplement une issue sur GitHub](https://github.com/imaginaires/imaginaires.github.io/issues/new) pour nous transmettre les coordonnées et informations de votre antenne afin que nous l'ajoutions.
-  - *Si vous savez coder* : Proposez une Pull Request (PR) pour intégrer votre antenne directement au code du site.
+### Plusieurs manières de contribuer :
+1. **Créer des moments d'évasion autour de vous (le plus important !)** : Avec ou sans association, l'essentiel est de partager le plaisir du jeu et d'apporter des moments d'évasion à ceux qui en ont besoin.
+2. **Nous aider à animer des parties** : Rejoignez nos sessions en milieu hospitalier pour animer des jeux de rôle pour les patients.
+3. **Créer une antenne dans votre ville** : Lancez le concept localement dans les hôpitaux de votre région avec notre aide.
+4. **Rejoindre l'association** : Devenez bénévole officiel pour prendre part à la vie et aux décisions de l'association.
+5. **Cloner et créer votre propre association** : Utilisez notre base de code (fork) pour lancer votre propre structure indépendante.
+6. **Nous aider à améliorer le site** : Proposez des modifications de design, des corrections de textes ou optimisez le code.
+7. **Ou autre chose ?** : Vous avez une idée d'activité, un partenariat ou une suggestion ? Toutes les initiatives simples sont bienvenues.
+
+### Comment procéder techniquement ?
+- *Si vous n'êtes pas développeur* : [Ouvrez simplement une issue sur GitHub](https://github.com/imaginaires/imaginaires.github.io/issues/new) pour nous faire part de vos projets, d'une antenne locale, ou pour nous contacter.
+- *Si vous savez coder* : Proposez une Pull Request (PR) pour intégrer vos modifications directement au code du site.
 
 
 ---
