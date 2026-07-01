@@ -1,10 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Terminal Typing Effect for the Header Brand Name
+    const brandLong = document.getElementById('brand-long');
+    const brandShort = document.getElementById('brand-short');
+    const brandCursor = document.querySelector('.brand-cursor');
+    
+    if (brandLong && brandShort) {
+        const textLong = brandLong.textContent;
+        const textShort = brandShort.textContent;
+        
+        brandLong.textContent = '';
+        brandShort.textContent = '';
+        
+        let indexLong = 0;
+        let indexShort = 0;
+        
+        function typeLong() {
+            if (indexLong < textLong.length) {
+                brandLong.textContent += textLong.charAt(indexLong);
+                indexLong++;
+                setTimeout(typeLong, 50); // 50ms typing speed
+            } else {
+                checkTypingFinished();
+            }
+        }
+        
+        function typeShort() {
+            if (indexShort < textShort.length) {
+                brandShort.textContent += textShort.charAt(indexShort);
+                indexShort++;
+                setTimeout(typeShort, 100); // slightly slower for mobile brand text
+            } else {
+                checkTypingFinished();
+            }
+        }
+        
+        let finishedCount = 0;
+        function checkTypingFinished() {
+            finishedCount++;
+            if (finishedCount === 2 && brandCursor) {
+                // Both typed! Maintain pulse/blinking cursor
+                brandCursor.style.animation = 'blink-cursor 0.8s infinite';
+            }
+        }
+        
+        // Start typing shortly after DOM loads
+        setTimeout(() => {
+            typeLong();
+            typeShort();
+        }, 300);
+    }
+
+    // 2. Mobile Navigation Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const navLinks = document.querySelectorAll('nav a');
     const sections = document.querySelectorAll('section');
 
-    // Mobile Navigation Toggle
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', () => {
             const isActive = menuToggle.classList.toggle('active');
@@ -12,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.setAttribute('aria-expanded', isActive);
         });
 
-        // Close mobile nav when a link is clicked
+        // Close mobile nav overlay when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
@@ -22,14 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll Highlighter for Navigation Links
+    // 3. Scroll Highlighter for Navigation Links
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            // Subtracting 120px to trigger the highlight slightly before entering the section
-            if (pageYOffset >= (sectionTop - 120)) {
+            // Highlight triggers slightly early (160px buffer)
+            if (pageYOffset >= (sectionTop - 160)) {
                 current = section.getAttribute('id');
             }
         });
@@ -37,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.forEach(link => {
             link.classList.remove('active');
             const href = link.getAttribute('href');
-            // Check if it's an internal anchor link
             if (href.startsWith('#') && href === `#${current}`) {
                 link.classList.add('active');
             }

@@ -108,7 +108,22 @@ section {
     border-bottom: 2px dashed rgba(157, 78, 221, 0.2);
 }
 
-/* Header & Navigation */
+/* Blinking terminal cursor for logo title typing effect */
+.brand-cursor {
+    color: var(--primary);
+    display: inline-block;
+    margin-left: 2px;
+    font-weight: bold;
+    animation: blink-cursor 0.8s infinite;
+    text-shadow: var(--border-glow);
+}
+
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Header & Navigation (Desktop Stacked Center Layout) */
 header {
     background-color: rgba(11, 9, 20, 0.9);
     backdrop-filter: blur(10px);
@@ -121,10 +136,11 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 80px;
-    position: relative;
+    padding: 1.5rem 0 1rem 0;
+    gap: 1rem;
 }
 
 .logo-link {
@@ -132,7 +148,7 @@ header {
     align-items: center;
     gap: 0.8rem;
     text-decoration: none;
-    z-index: 1001; /* Keep above mobile nav overlay */
+    z-index: 1001;
 }
 
 .logo-img {
@@ -152,6 +168,7 @@ header {
     color: var(--text-color);
     text-shadow: 0 0 5px var(--secondary);
     letter-spacing: 1px;
+    white-space: nowrap; /* Prevent brand text from wrapping */
 }
 
 .brand-short {
@@ -165,7 +182,7 @@ header {
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001; /* Keep above nav overlay */
+    z-index: 1001;
 }
 
 .hamburger {
@@ -217,8 +234,9 @@ header {
 
 nav ul {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     list-style: none;
+    justify-content: center;
 }
 
 nav a {
@@ -253,10 +271,10 @@ nav a:hover::before {
 
 /* Hero Section */
 #hero {
-    padding: 8rem 0 6rem 0;
+    padding: 6rem 0;
     display: flex;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 120px);
     background: radial-gradient(circle at 80% 20%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 10% 80%, rgba(0, 255, 255, 0.08) 0%, transparent 50%);
 }
@@ -818,6 +836,15 @@ footer {
         display: block;
     }
 
+    /* Standard side-by-side header content on mobile */
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 0 2rem;
+    }
+
     /* Fixed full screen navigation overlay for mobile */
     nav {
         position: fixed;
@@ -849,7 +876,7 @@ footer {
     }
     
     nav a::before {
-        display: none; /* Disable layout shifts on mobile touch */
+        display: none;
     }
 }
 
