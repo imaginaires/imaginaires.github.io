@@ -59,3 +59,11 @@ Pour visualiser le site sur votre ordinateur :
 3. Si vous souhaitez tester le site avec un serveur local, vous pouvez exécuter l'une de ces commandes dans votre terminal depuis la racine du projet :
    - Avec Python : `python3 -m http.server 8000` (puis ouvrez `http://localhost:8000`)
    - Avec Node.js : `npx serve`
+
+---
+
+## 📄 Licence
+
+Ce projet est distribué sous la licence **Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0)**. 
+
+Vous êtes libre de partager et d'adapter ce projet tant que vous attribuez la paternité à l'œuvre originale, n'en faites pas d'usage commercial, et redistribuez vos contributions sous la même licence. Voir le fichier [LICENSE](file:///home/mt/Documents/projects/asso-isf/imaginaires/LICENSE) pour plus de détails.
