@@ -363,14 +363,129 @@
             box-shadow: var(--border-glow-hover);
         }
 
-        .member-avatar {
-            width: 90px;
-            height: 90px;
+        .css-avatar {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            border: 3px solid var(--primary);
+            border: 3px solid var(--secondary);
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover .css-avatar {
+            border-color: var(--primary);
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: var(--border-glow-hover);
+        }
+
+        .css-avatar .shape {
+            position: absolute;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Baptiste (Alchimiste des Rêves) shapes */
+        .baptiste-avatar .circle-main {
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            border-radius: 50%;
+            top: 15%;
+            left: 15%;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+            opacity: 0.85;
+        }
+
+        .baptiste-avatar .triangle-back {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            bottom: 12%;
+            right: 12%;
+            transform: rotate(15deg);
+            opacity: 0.7;
+        }
+
+        .baptiste-avatar .line-accent {
+            width: 90px;
+            height: 3px;
+            background: var(--accent);
+            top: 50%;
+            left: 5%;
+            transform: rotate(-35deg);
+            opacity: 0.9;
+        }
+
+        .baptiste-avatar .dot {
+            width: 10px;
+            height: 10px;
+            background: #ffffff;
+            border-radius: 50%;
+            top: 60%;
+            left: 70%;
+            box-shadow: 0 0 8px #ffffff;
+        }
+
+        /* Mickael (Artisan des Quêtes) shapes */
+        .mickael-avatar .square-main {
+            width: 45px;
+            height: 45px;
+            background: var(--accent);
+            top: 15%;
+            right: 15%;
+            transform: rotate(25deg);
+            opacity: 0.85;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+        }
+
+        .mickael-avatar .triangle-compass {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            bottom: 18%;
+            left: 12%;
+            transform: rotate(-45deg);
+            opacity: 0.9;
             box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
-            object-fit: cover;
-            background-color: rgba(255,255,255,0.05);
+        }
+
+        .mickael-avatar .circle-accent {
+            width: 25px;
+            height: 25px;
+            background: var(--secondary);
+            border-radius: 50%;
+            top: 48%;
+            left: 48%;
+            opacity: 0.8;
+        }
+
+        .mickael-avatar .line-accent {
+            width: 4px;
+            height: 70px;
+            background: #ffffff;
+            top: 15%;
+            left: 35%;
+            transform: rotate(45deg);
+            opacity: 0.7;
+        }
+
+        /* Shape hover transformations */
+        .team-member:hover .baptiste-avatar .circle-main {
+            transform: scale(1.1) translate(3px, 3px);
+        }
+        .team-member:hover .baptiste-avatar .triangle-back {
+            transform: rotate(25deg) translate(-2px, -2px);
+        }
+        .team-member:hover .mickael-avatar .square-main {
+            transform: rotate(40deg) scale(0.95);
+        }
+        .team-member:hover .mickael-avatar .triangle-compass {
+            transform: rotate(-30deg) translate(2px, -2px);
         }
 
         .member-info h3 {
@@ -528,7 +643,7 @@
                 padding: 2rem 1.5rem;
             }
 
-            .member-avatar {
+            .css-avatar {
                 margin: 0 auto;
             }
         }
@@ -610,7 +725,12 @@
                 <div class="team-grid">
                     <!-- Member 1 -->
                     <div class="team-member">
-                        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/dreaming-1589230-1345262.png" alt="Avatar de Baptiste" class="member-avatar" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'40\' fill=\'%239d4edd\'/><text x=\'50\' y=\'58\' font-size=\'30\' fill=\'white\' text-anchor=\'middle\' font-family=\'sans-serif\'>B</text></svg>'">
+                        <div class="css-avatar baptiste-avatar" aria-hidden="true">
+                            <div class="shape circle-main"></div>
+                            <div class="shape triangle-back"></div>
+                            <div class="shape line-accent"></div>
+                            <div class="shape dot"></div>
+                        </div>
                         <div class="member-info">
                             <h3>Baptiste</h3>
                             <span class="member-role">Alchimiste des Rêves</span>
@@ -619,7 +739,12 @@
 
                     <!-- Member 2 -->
                     <div class="team-member">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1408/1408801.png" alt="Avatar de Mickael" class="member-avatar" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'40\' fill=\'%2300ffff\'/><text x=\'50\' y=\'58\' font-size=\'30\' fill=\'black\' text-anchor=\'middle\' font-family=\'sans-serif\'>M</text></svg>'">
+                        <div class="css-avatar mickael-avatar" aria-hidden="true">
+                            <div class="shape square-main"></div>
+                            <div class="shape triangle-compass"></div>
+                            <div class="shape circle-accent"></div>
+                            <div class="shape line-accent"></div>
+                        </div>
                         <div class="member-info">
                             <h3>Mickael</h3>
                             <span class="member-role">Artisan des Quêtes</span>
