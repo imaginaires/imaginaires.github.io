@@ -325,10 +325,146 @@
             box-shadow: var(--border-glow-hover);
         }
 
-        .card-icon {
-            font-size: 2.5rem;
+        .css-card-icon {
+            width: 70px;
+            height: 70px;
             margin-bottom: 1.5rem;
-            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 2px solid var(--secondary);
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .css-card-icon {
+            border-color: var(--primary);
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: var(--border-glow);
+        }
+
+        .css-card-icon .shape {
+            position: absolute;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Dice Icon shapes */
+        .dice-icon .square-tilted {
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--primary);
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: rotate(15deg);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .dice-icon .diamond-inner {
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            position: absolute;
+            top: 38%;
+            left: 38%;
+            transform: rotate(45deg);
+        }
+
+        .dice-icon .dot-1 {
+            width: 5px;
+            height: 5px;
+            background: #ffffff;
+            border-radius: 50%;
+            top: 22%;
+            left: 22%;
+            box-shadow: 0 0 5px #ffffff;
+        }
+
+        .dice-icon .dot-2 {
+            width: 5px;
+            height: 5px;
+            background: #ffffff;
+            border-radius: 50%;
+            bottom: 22%;
+            right: 22%;
+            box-shadow: 0 0 5px #ffffff;
+        }
+
+        .dice-icon .line-accent {
+            width: 60px;
+            height: 2px;
+            background: var(--secondary);
+            top: 60%;
+            left: 5%;
+            transform: rotate(-25deg);
+            opacity: 0.8;
+        }
+
+        /* Sparkle/Imagination Icon shapes */
+        .sparkle-icon .circle-main {
+            width: 36px;
+            height: 36px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            top: 22%;
+            left: 22%;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+        }
+
+        .sparkle-icon .star-horizontal {
+            width: 46px;
+            height: 2px;
+            background: #ffffff;
+            top: 48%;
+            left: 17%;
+            box-shadow: 0 0 8px #ffffff;
+        }
+
+        .sparkle-icon .star-vertical {
+            width: 2px;
+            height: 46px;
+            background: #ffffff;
+            top: 17%;
+            left: 48%;
+            box-shadow: 0 0 8px #ffffff;
+        }
+
+        .sparkle-icon .dot-particle-1 {
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            top: 20%;
+            right: 20%;
+            box-shadow: 0 0 6px var(--primary);
+        }
+
+        .sparkle-icon .dot-particle-2 {
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            bottom: 20%;
+            left: 20%;
+            box-shadow: 0 0 4px var(--primary);
+        }
+
+        /* Hover animations for card shapes */
+        .card:hover .dice-icon .square-tilted {
+            transform: rotate(30deg) scale(1.1);
+        }
+        .card:hover .dice-icon .diamond-inner {
+            background: #ffffff;
+            box-shadow: 0 0 8px #ffffff;
+        }
+        .card:hover .sparkle-icon .circle-main {
+            transform: scale(1.15);
+        }
+        .card:hover .sparkle-icon .star-horizontal {
+            transform: scaleX(1.2);
+        }
+        .card:hover .sparkle-icon .star-vertical {
+            transform: scaleY(1.2);
         }
 
         .card h3 {
@@ -647,6 +783,22 @@
                 margin: 0 auto;
             }
         }
+
+        @media (max-width: 450px) {
+            .brand-name {
+                font-size: 1.3rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.7rem;
+            }
+            .btn {
+                font-size: 1.25rem;
+                padding: 0.6rem 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -699,7 +851,13 @@
                 <div class="grid-2">
                     <!-- Activity Card -->
                     <div class="card">
-                        <span class="card-icon" aria-hidden="true">🎲</span>
+                        <div class="css-card-icon dice-icon" aria-hidden="true">
+                            <div class="shape square-tilted"></div>
+                            <div class="shape diamond-inner"></div>
+                            <div class="shape dot-1"></div>
+                            <div class="shape dot-2"></div>
+                            <div class="shape line-accent"></div>
+                        </div>
                         <h3>Aventures Captivantes</h3>
                         <p>
                             Nous proposons des jeux de rôle captivants adaptés à tous les âges, des plus jeunes aux plus âgés. Nos activités se déroulent dans les services hospitaliers, où nous créons des moments d'évasion dans des univers multiples et variés. Que ce soit en menant des enquêtes palpitantes, en orchestrant le casse du siècle, ou en vivant des aventures épiques d'héroïc-fantaisie, chaque scénario est conçu pour stimuler l'imaginaire et divertir les participant.e.s.
@@ -708,7 +866,13 @@
 
                     <!-- Impact Card -->
                     <div class="card">
-                        <span class="card-icon" aria-hidden="true">✨</span>
+                        <div class="css-card-icon sparkle-icon" aria-hidden="true">
+                            <div class="shape circle-main"></div>
+                            <div class="shape star-horizontal"></div>
+                            <div class="shape star-vertical"></div>
+                            <div class="shape dot-particle-1"></div>
+                            <div class="shape dot-particle-2"></div>
+                        </div>
                         <h3>Pouvoir de l'Imaginaire</h3>
                         <p>
                             Nos jeux de rôle ne sont pas seulement une source de divertissement; ils sont aussi un outil puissant pour encourager l'interaction sociale, renforcer la créativité, et apporter un souffle d'air frais dans le quotidien des patient.e.s. Grâce à ces moments immersives, nous offrons aux participant.e.s la possibilité de s'évader, de rêver et de vivre des expériences uniques, le temps d'une partie.
