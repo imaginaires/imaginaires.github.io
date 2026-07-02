@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
 
-    // 2. Mobile Navigation Toggle
+    // 2. Mobile Navigation Toggle & Smooth Centered Scrolling
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const navLinks = document.querySelectorAll('nav a');
@@ -62,16 +62,28 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.toggle('active');
             menuToggle.setAttribute('aria-expanded', isActive);
         });
+    }
 
-        // Close mobile nav overlay when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            // Close mobile nav overlay
+            if (menuToggle && nav) {
                 menuToggle.classList.remove('active');
                 nav.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
-            });
+            }
         });
-    }
+    });
 
     // 3. Scroll Highlighter for Navigation Links
     window.addEventListener('scroll', () => {
