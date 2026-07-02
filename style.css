@@ -300,6 +300,11 @@ nav a:hover::before {
     z-index: 2;
 }
 
+.hero-text p {
+    text-shadow: 0 2px 12px rgba(11, 9, 20, 0.95), 
+                 0 0 20px rgba(11, 9, 20, 0.85);
+}
+
 .hero-tagline {
     font-size: 1.4rem;
     color: var(--primary);
@@ -316,7 +321,7 @@ nav a:hover::before {
     position: relative;
     z-index: 1;
     margin-left: -9rem;
-    opacity: 0.85;
+    opacity: 0.6;
     pointer-events: none;
 }
 
