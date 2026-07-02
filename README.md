@@ -18,7 +18,7 @@ Ce projet est né de l'initiative de deux passionnés de jeux désireux de parta
 6. **Ou autre chose ?** : Vous avez une idée d'activité, un partenariat ou une suggestion ? Toutes les initiatives simples sont bienvenues.
 
 ### Comment procéder techniquement ?
-- [Envoyez-nous un e-mail](mailto:imaginairessansfrontieres@gmail.com?subject=Contribution%20-%20Imaginaires%20Sans%20Fronti%C3%A8res) pour nous faire part de vos souhaits/envies.
+- [Envoyez-nous un e-mail](mailto:imaginairessansfrontieres@gmail.com?subject=Rejoindre%20-%20Imaginaires%20Sans%20Fronti%C3%A8res) pour nous faire part de vos souhaits/envies.
 
 
 ---
