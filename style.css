@@ -288,21 +288,13 @@ nav a:hover::before {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 2rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
     align-items: center;
-    position: relative;
 }
 
 .hero-text {
     animation: fadeInUp 0.8s ease-out;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-text p {
-    text-shadow: 0 2px 12px rgba(11, 9, 20, 0.95), 
-                 0 0 20px rgba(11, 9, 20, 0.85);
 }
 
 .hero-tagline {
@@ -318,18 +310,13 @@ nav a:hover::before {
     justify-content: center;
     align-items: center;
     animation: float 6s ease-in-out infinite;
-    position: relative;
-    z-index: 1;
-    margin-left: -9rem;
-    opacity: 0.6;
-    pointer-events: none;
 }
 
 .hero-art {
-    max-width: 120%;
+    max-width: 100%;
     height: auto;
-    max-height: 480px;
-    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.35));
+    max-height: 400px;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.25));
 }
 
 /* Buttons */
@@ -857,14 +844,6 @@ footer {
 
     .hero-art-container {
         order: -1;
-        margin-left: 0;
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .hero-art {
-        max-width: 80%;
-        max-height: 320px;
     }
 
     .grid-2, .team-grid {
