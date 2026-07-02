@@ -777,7 +777,13 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    margin: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    padding-bottom: 2rem;
+}
+
+#activities {
+    padding-bottom: 8rem;
 }
 
 .step-card {
