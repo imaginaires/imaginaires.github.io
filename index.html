@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imaginaires Sans Frontières</title>
-    <meta name="description" content="Imaginaires Sans Frontières est une association dont la mission est de contribuer au bien être des patients par des parenthèses ludiques.">
+    <title>Imaginaires Sans Frontières - Parenthèses Ludiques & Solidaires</title>
+    <meta name="description" content="Imaginaires Sans Frontières organise des jeux de rôle et parenthèses ludiques gratuites en milieu hospitalier et associatif pour les personnes dans le besoin.">
     
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Imaginaires Sans Frontières">
-    <meta property="og:description" content="Contribuer au bien-être des patients par des parenthèses ludiques.">
+    <meta property="og:description" content="Offrir des moments de joie et d'évasion par le jeu.">
     <meta property="og:image" content="img/logo-isf-fullart.svg">
     <meta property="og:url" content="https://imaginaires.github.io/">
     <meta property="og:type" content="website">
@@ -22,9 +22,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme-console">
 
-    <!-- Header & Navigation -->
+    <!-- Prototype Layout Switcher Ribbon -->
+    <div id="theme-switcher">
+        <span class="switcher-label">PROTOTYPES UI/UX :</span>
+        <button class="switcher-btn active" data-theme="console">1. Console Centrée</button>
+        <button class="switcher-btn" data-theme="timeline">2. Chronique</button>
+        <button class="switcher-btn" data-theme="dashboard">3. Blueprint Grid</button>
+        <button class="switcher-btn" data-theme="interactive">4. Onglets</button>
+        <button class="switcher-btn" data-theme="split">5. Split Fixe</button>
+    </div>
+
+    <!-- Header & Navigation (Standard Layout) -->
     <header>
         <div class="container header-content">
             <a href="#hero" class="logo-link" aria-label="Accueil Imaginaires Sans Frontières">
@@ -41,150 +51,216 @@
             <nav id="main-nav" aria-label="Menu principal">
                 <ul>
                     <li><a href="#hero" class="active">Accueil</a></li>
-                    <li><a href="#activities">Activités</a></li>
-                    <li><a href="#team">L'Équipe</a></li>
-                    <li><a href="#contribute">Contribuer</a></li>
-                    <li><a href="https://imaginairessansfrontieres.blogspot.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                    <li><a href="mailto:contact@imaginairessansfrontieres.fr?subject=Contact%20Imaginaires%20Sans%20Fronti%C3%A8res">Contact</a></li>
+                    <li><a href="#animations">Animations</a></li>
+                    <li><a href="#contribute">Rejoindre</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="container hero-grid">
-                <div class="hero-text">
-                    <p class="hero-tagline">PARENTHÈSES LUDIQUES & SOLIDARES</p>
-                    <h1>Imaginaires Sans Frontières</h1>
-                    <p>
-                        Bienvenue sur le site d'Imaginaires Sans Frontières, une association dédiée à apporter des moments de joie et d'évasion. Notre mission est de <strong>contribuer au bien être des patient.e.s en introduisant des parenthèses ludiques</strong> dans leur quotidien parfois répétitif, notamment lors de longues hospitalisations.
-                    </p>
-                    <div style="margin-top: 2rem;">
-                        <a href="mailto:contact@imaginairessansfrontieres.fr?subject=Contact%20Imaginaires%20Sans%20Fronti%C3%A8res" class="btn">
-                            Nous Contacter
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-art-container">
-                    <img src="img/logo-isf-fullart.svg" alt="Imaginaires Sans Frontières Art Logo" class="hero-art">
-                </div>
+    <!-- Main Split-Layout Container (Supports Theme 5) -->
+    <div class="split-layout">
+        
+        <!-- Left Column for Split Theme (Concept 5) -->
+        <div class="split-left">
+            <div class="split-left-brand">
+                <img src="img/logo-isf.svg" alt="" class="logo-img">
+                <span class="brand-name">Imaginaires Sans Frontières</span>
             </div>
-        </section>
-
-        <!-- Activities Section -->
-        <section id="activities">
-            <div class="container">
-                <h2>Nos Activités</h2>
-                <div class="grid-2">
-                    <!-- Activity Card -->
-                    <div class="card">
-                        <div class="css-card-icon dice-icon" aria-hidden="true">
-                            <div class="shape square-tilted"></div>
-                            <div class="shape diamond-inner"></div>
-                            <div class="shape dot-1"></div>
-                            <div class="shape dot-2"></div>
-                            <div class="shape line-accent"></div>
-                        </div>
-                        <h3>Instants Captivants</h3>
-                        <p>
-                            Nous proposons des jeux de rôle captivants adaptés à tous les âges, des plus jeunes aux plus âgés. Nos activités se déroulent dans les services hospitaliers, dans d'autres associations et même en plain air, où nous créons des moments d'évasion dans des univers multiples et variés. Que ce soit en menant des enquêtes palpitantes, en orchestrant le casse du siècle, ou en vivant des aventures épiques d'héroïc-fantaisie, chaque moment est conçu pour nous transporter dans les imaginaires.
-                        </p>
-                    </div>
-
-                    <!-- Impact Card -->
-                    <div class="card">
-                        <div class="css-card-icon sparkle-icon" aria-hidden="true">
-                            <div class="shape circle-main"></div>
-                            <div class="shape star-horizontal"></div>
-                            <div class="shape star-vertical"></div>
-                            <div class="shape dot-particle-1"></div>
-                            <div class="shape dot-particle-2"></div>
-                        </div>
-                        <h3>Pouvoir de l'Imaginaire</h3>
-                        <p>
-                            Nos jeux de rôle ne sont pas seulement une source de divertissement; ils sont aussi un outil puissant pour encourager l'interaction sociale, renforcer la créativité, et apporter un souffle d'air frais dans des quotidiens parfois lourds. Grâce à ces moments immersives, nous offrons aux participant.e.s la possibilité de s'évader et de rêver.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team">
-            <div class="container">
-                <h2>L'Équipe</h2>
-                <div class="team-grid">
-                    <!-- Member 1 -->
-                    <div class="team-member">
-                        <div class="css-avatar baptiste-avatar" aria-hidden="true">
-                            <div class="shape circle-main"></div>
-                            <div class="shape triangle-back"></div>
-                            <div class="shape line-accent"></div>
-                            <div class="shape dot"></div>
-                        </div>
-                        <div class="member-info">
-                            <h3>Baptiste</h3>
-                            <span class="member-role">Alchimiste des Rêves</span>
-                        </div>
-                    </div>
-
-                    <!-- Member 2 -->
-                    <div class="team-member">
-                        <div class="css-avatar mickael-avatar" aria-hidden="true">
-                            <div class="shape square-main"></div>
-                            <div class="shape triangle-compass"></div>
-                            <div class="shape circle-accent"></div>
-                            <div class="shape line-accent"></div>
-                        </div>
-                        <div class="member-info">
-                            <h3>Mickael</h3>
-                            <span class="member-role">Artisan des Quêtes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contribute Section -->
-        <section id="contribute" style="border-bottom: none;">
-            <div class="container">
-                <div class="outro-card">
-                    <h2>D'autres Imaginaires ?</h2>
-                    <p>
-                        Cette association se développe dans une démarche ouverte et libre. Si vous aussi, vous avez envie de créer une association ou de lancer des parties autour de vous, n'hésitez pas à répliquer ce concept ! Si vous avez le temps vous pouvez lancer votre propre antenne. Plus nous serons nombreux, plus nous pourrons proposer des moments d'évasion à celles et ceux qui en ont besoin.
-                    </p>
-                    <a href="https://github.com/imaginaires/imaginaires.github.io" target="_blank" rel="noopener noreferrer" class="btn">
-                        Contribuer
-                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="fill: currentColor; margin-left: 8px; display: inline-block; vertical-align: text-bottom;">
-                            <path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-social">
-                <a href="https://www.instagram.com/imaginairessansfrontieres" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Suivez-nous sur Instagram">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                    </svg>
-                    Instagram
+            
+            <nav class="split-nav" aria-label="Menu latéral">
+                <ul>
+                    <li><a href="#hero" class="active">Accueil</a></li>
+                    <li><a href="#animations">Animations</a></li>
+                    <li><a href="#contribute">Rejoindre</a></li>
+                </ul>
+            </nav>
+            
+            <div>
+                <a href="mailto:contact@imaginairessansfrontieres.fr?subject=Demande%20d%27animation%20-%20Imaginaires%20Sans%20Fronti%C3%A8res" class="btn btn-secondary">
+                    Demander une animation
                 </a>
             </div>
-            <p class="footer-copyright">
-                Copyright &copy; 2024 Imaginaires Sans Frontières &bull; Sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary);">CC BY-NC-SA 4.0</a>
-            </p>
         </div>
-    </footer>
 
-    <!-- Simple Navigation Highlighter Script -->
+        <!-- Right Column (Contents) -->
+        <div class="split-right">
+            <main>
+                <!-- Interactive Tabs Container (Supports Theme 4) -->
+                <div class="interactive-container">
+                    
+                    <!-- Tab Headers (Concept 4 only) -->
+                    <div class="tab-header">
+                        <button class="tab-btn active-tab" data-tab="hero">Accueil</button>
+                        <button class="tab-btn" data-tab="animations">Animations</button>
+                        <button class="tab-btn" data-tab="team">L'Équipe</button>
+                        <button class="tab-btn" data-tab="contribute">Rejoindre</button>
+                    </div>
+                    
+                    <!-- Tab Body / Content Area -->
+                    <div class="tab-body">
+                        
+                        <!-- Hero Section -->
+                        <section id="hero" class="active-section">
+                            <div class="container hero-grid">
+                                <div class="hero-text">
+                                    <p class="hero-tagline">PARENTHÈSES LUDIQUES & SOLIDAIRES</p>
+                                    <h1>Imaginaires Sans Frontières</h1>
+                                    <p>
+                                        Nous offrons des moments d'évasion et de rêve à ceux qui en ont le plus besoin. Hôpitaux, associations, structures d'accueil : <strong>invitez nos animateurs bénévoles</strong> à organiser des sessions de jeux de rôle adaptées à vos publics.
+                                    </p>
+                                    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                        <a href="mailto:contact@imaginairessansfrontieres.fr?subject=Demande%20d%27animation%20-%20Imaginaires%20Sans%20Fronti%C3%A8res" class="btn">
+                                            Demander une animation 🎲
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="hero-art-container">
+                                    <img src="img/logo-isf-fullart.svg" alt="Imaginaires Sans Frontières Art Logo" class="hero-art">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Animations Section -->
+                        <section id="animations">
+                            <div class="container">
+                                <h2>Nos Animations</h2>
+                                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+                                    Nous intervenons gratuitement pour apporter des parenthèses de jeu immersives. Découvrez comment organiser une animation dans votre structure.
+                                </p>
+                                
+                                <!-- Step-by-Step booking flow -->
+                                <h3>Comment ça se passe ?</h3>
+                                <div class="steps-container">
+                                    <div class="step-card">
+                                        <div class="step-num">01</div>
+                                        <h4>Contact</h4>
+                                        <p>Formulez votre demande d'animation par e-mail en indiquant votre public et vos disponibilités.</p>
+                                    </div>
+                                    <div class="step-card">
+                                        <div class="step-num">02</div>
+                                        <h4>Co-conception</h4>
+                                        <p>Nous choisissons ensemble un univers (enquête, féérique, aventures) et des scénarios adaptés à l'âge et aux besoins des joueurs.</p>
+                                    </div>
+                                    <div class="step-card">
+                                        <div class="step-num">03</div>
+                                        <h4>Le Jour J</h4>
+                                        <p>Nos maîtres du jeu bénévoles viennent sur place et animent l'aventure. Tout est gratuit et fourni par l'association.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Cards for activity details -->
+                                <div class="grid-2" style="margin-top: 4rem;">
+                                    <div class="card">
+                                        <div class="css-card-icon dice-icon" aria-hidden="true">
+                                            <div class="shape square-tilted"></div>
+                                            <div class="shape diamond-inner"></div>
+                                            <div class="shape dot-1"></div>
+                                            <div class="shape dot-2"></div>
+                                            <div class="shape line-accent"></div>
+                                        </div>
+                                        <h3>Instants Captivants</h3>
+                                        <p>
+                                            Des parties de jeux de rôle sur-mesure menées en milieu hospitalier, en plein air ou au sein d'autres associations. Chaque scénario est adapté pour stimuler l'imagination et favoriser l'interaction sociale des participant.e.s.
+                                        </p>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="css-card-icon sparkle-icon" aria-hidden="true">
+                                            <div class="shape circle-main"></div>
+                                            <div class="shape star-horizontal"></div>
+                                            <div class="shape star-vertical"></div>
+                                            <div class="shape dot-particle-1"></div>
+                                            <div class="shape dot-particle-2"></div>
+                                        </div>
+                                        <h3>Le Pouvoir du Rêve</h3>
+                                        <p>
+                                            Le jeu de rôle est un outil puissant d'évasion et de créativité. Il permet de rompre l'isolement, d'encourager la collaboration, et d'apporter un souffle d'air frais dans des quotidiens parfois lourds ou répétitifs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Team Section -->
+                        <section id="team">
+                            <div class="container">
+                                <h2>L'Équipe d'Animateurs</h2>
+                                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+                                    Deux passionnés de jeux engagés pour semer l'imaginaire dans les services hospitaliers et associatifs.
+                                </p>
+                                <div class="team-grid">
+                                    <div class="team-member">
+                                        <div class="css-avatar baptiste-avatar" aria-hidden="true">
+                                            <div class="shape circle-main"></div>
+                                            <div class="shape triangle-back"></div>
+                                            <div class="shape line-accent"></div>
+                                            <div class="shape dot"></div>
+                                        </div>
+                                        <div class="member-info">
+                                            <h3>Baptiste</h3>
+                                            <span class="member-role">Alchimiste des Rêves</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-member">
+                                        <div class="css-avatar mickael-avatar" aria-hidden="true">
+                                            <div class="shape square-main"></div>
+                                            <div class="shape triangle-compass"></div>
+                                            <div class="shape circle-accent"></div>
+                                            <div class="shape line-accent"></div>
+                                        </div>
+                                        <div class="member-info">
+                                            <h3>Mickael</h3>
+                                            <span class="member-role">Artisan des Quêtes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Contribute Section -->
+                        <section id="contribute" style="border-bottom: none;">
+                            <div class="container">
+                                <div class="outro-card">
+                                    <h2>D'autres Imaginaires ?</h2>
+                                    <p>
+                                        Cette association se développe dans une démarche ouverte et libre. Si vous aussi, vous souhaitez lancer des parties de jeux solidaires, créer une antenne locale ou participer à l'amélioration du projet, rejoignez l'aventure !
+                                    </p>
+                                    <a href="https://github.com/imaginaires/imaginaires.github.io" target="_blank" rel="noopener noreferrer" class="btn">
+                                        Essaimer le concept
+                                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="fill: currentColor; margin-left: 8px; display: inline-block; vertical-align: text-bottom;">
+                                            <path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/imaginairessansfrontieres" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Suivez-nous sur Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                            Instagram
+                        </a>
+                    </div>
+                    <p class="footer-copyright">
+                        Copyright &copy; 2024 Imaginaires Sans Frontières &bull; Sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary);">CC BY-NC-SA 4.0</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Script loading -->
     <script src="script.js"></script>
 </body>
 </html>
